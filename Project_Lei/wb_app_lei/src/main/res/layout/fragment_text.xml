@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#06000000"
+    android:orientation="vertical">
+    <!--微博作者信息-->
+    <LinearLayout
+        android:layout_marginTop="16px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16px"
+        android:layout_marginRight="16px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!-- 微博发布者头像-->
+        <ImageView
+            android:id="@+id/iv_user_image_fragment_text"
+            android:layout_width="60px"
+            android:layout_height="60px" />
+
+        <LinearLayout
+            android:layout_marginLeft="16px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerPadding="16px"
+                android:orientation="horizontal">
+                <!-- 微博发布者昵称-->
+                <TextView
+                    android:id="@+id/tv_screen_name_fragment_text"
+                    android:textColor="@android:color/holo_orange_dark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!-- 微博发布城市-->
+                <TextView
+                    android:id="@+id/tv_city_fragment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_purple"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <!-- 微博发布时间-->
+                <TextView
+                    android:id="@+id/tv_created_at_fragment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <!-- 微博发布来源-->
+                <TextView
+                    android:id="@+id/tv_created_from_fragment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <!--微博正文-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16px"
+        android:layout_marginRight="16px"
+        android:orientation="horizontal">
+        <!-- 正文内容-->
+        <TextView
+            android:id="@+id/tv_text_fragment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tv_text_fragment_home_item_selector"
+            android:textColor="#AA000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!-- 被转发微博原文-->
+    <LinearLayout
+        android:id="@+id/ll_retweeted_fragment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#16000000"
+        android:orientation="vertical"
+        android:layout_marginLeft="32px"
+        android:layout_marginRight="32px">
+        <!--被转发微博正文-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_retweeted_text_fragment_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/tv_text_fragment_home_item_selector"
+                android:textColor="#99000000"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <!--被转发微博图片、视频-->
+        <GridView
+            android:id="@+id/grid_retweeted_9pic_fragment_text"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:columnCount="3"
+            android:gravity="center"
+            android:horizontalSpacing="8px"
+            android:numColumns="3"
+            android:padding="8px"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="8px"/>
+    </LinearLayout>
+    <!--微博图片、视频-->
+    <GridView
+        android:id="@+id/grid_9pic_fragment_text"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_marginLeft="16px"
+        android:layout_marginRight="16px"
+        android:columnCount="3"
+        android:gravity="center"
+        android:horizontalSpacing="8px"
+        android:numColumns="3"
+        android:padding="8px"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="8px"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16px"
+        android:layout_marginRight="16px"
+        android:background="#33000000" />
+    <!--微博转发、评论、点赞-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_toolbar_fragment_text"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtn_retweet_fragment_text"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_home_fragment_selector"
+            android:button="@null"
+            android:drawableLeft="@mipmap/statusdetail_icon_retweet"
+            android:paddingBottom="10px"
+            android:paddingLeft="48px"
+            android:paddingTop="10px"
+            android:text="转发数"
+            android:textColor="#55000000"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="5px"
+            android:background="#33000000" />
+
+        <RadioButton
+            android:id="@+id/rbtn_comment_fragment_text"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_home_fragment_selector"
+            android:button="@null"
+            android:drawableLeft="@mipmap/statusdetail_icon_comment"
+            android:paddingBottom="10px"
+            android:paddingLeft="48px"
+            android:paddingTop="10px"
+            android:text="评论数"
+            android:textColor="#55000000"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="5px"
+            android:background="#33000000" />
+
+        <RadioButton
+            android:id="@+id/rbtn_like_fragment_text"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rbtn_home_fragment_selector"
+            android:button="@null"
+            android:drawableLeft="@mipmap/statusdetail_icon_like"
+            android:paddingBottom="10px"
+            android:paddingLeft="48px"
+            android:paddingTop="10px"
+            android:text="赞"
+            android:textColor="#55000000"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

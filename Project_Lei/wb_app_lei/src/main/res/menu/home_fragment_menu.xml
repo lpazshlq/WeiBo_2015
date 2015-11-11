@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/hot_or_like_activity"
+        android:icon="@mipmap/navigationbar_friendattention"
+        android:showAsAction="always"
+        android:title="@null" />
+</menu>

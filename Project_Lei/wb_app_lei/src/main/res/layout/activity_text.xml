@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16px"
+        android:paddingRight="16px"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1">
+            <RadioButton
+                android:padding="16px"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rbtn_return_activity_text"
+                android:button="@null"
+                android:text="返回"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="微博正文"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:padding="24px"
+                android:src="@drawable/update_selector"
+                android:background="#00ffffff"
+                android:id="@+id/ibtn_refresh_activity_update" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/sv_activity_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_sv_activity_text"
+            android:dividerPadding="8px"
+            android:orientation="vertical">
+
+            <fragment
+                android:id="@+id/ft_text_activity_text"
+                android:name="com.lei.wb_fragment.Text_Fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </fragment>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#33000000"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64px"
+                    android:id="@+id/ll_toolbar_activity_text"
+                    android:layout_marginLeft="16px"
+                    android:layout_marginRight="16px"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbtn_retweet_tab_activity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:padding="16px"
+                        android:text="转发 0" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn_comment_tab_activity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#55AA66CC"
+                        android:button="@null"
+                        android:padding="16px"
+                        android:text="评论 0" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:id="@+id/rbtn_like_tab_activity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:padding="16px"
+                        android:text="赞 0" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#33000000"/>
+                <LinearLayout
+                    android:id="@+id/ll_loading_activity_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="32px"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_loading_activity_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/loading_animation_01" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="加载中...." />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#33000000"/>
+                <ListView
+                    android:id="@+id/lv_retweet_comment_like_activity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#33000000"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/ll_toolbar_bottom_activity_text"
+        android:layout_height="64px"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtn_retweet_activity_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@mipmap/timeline_icon_retweet"
+            android:paddingBottom="16px"
+            android:paddingLeft="40px"
+            android:paddingTop="8px"
+            android:text=" 转发" />
+
+        <RadioButton
+            android:id="@+id/rbtn_comment_activity_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@mipmap/timeline_icon_comment"
+            android:paddingBottom="16px"
+            android:paddingLeft="40px"
+            android:paddingTop="8px"
+            android:text="评论" />
+
+        <RadioButton
+            android:id="@+id/rbtn_like_activity_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableLeft="@mipmap/timeline_icon_unlike"
+            android:paddingBottom="16px"
+            android:paddingLeft="40px"
+            android:paddingTop="8px"
+            android:text="赞" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--<FrameLayout-->
+    <!--android:id="@+id/framelayout_activity_user"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1">-->
+    <!--</FrameLayout>-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager_fragment_activity_user"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#33000000" />
+
+    <RadioGroup
+        android:id="@+id/rgroup_activity_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rbtn_home_activity_user"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbtn_home_activity_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabbar_home_selector"
+            android:gravity="center"
+            android:text="首页"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_message_activity_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabbar_message_center_selector"
+            android:gravity="center"
+            android:text="消息"
+            android:textSize="10sp" />
+
+
+        <ImageButton
+            android:id="@+id/ibtn_share_activity_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tabbar_share_back_selector"
+            android:button="@null"
+            android:src="@drawable/tabbar_share_draw_selector" />
+
+        <RadioButton
+            android:id="@+id/rbtn_discover_activity_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabbar_discover_selector"
+            android:gravity="center"
+            android:text="发现"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbtn_profile_activity_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/tabbar_profile_selector"
+            android:gravity="center"
+            android:text="我"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+</LinearLayout>
